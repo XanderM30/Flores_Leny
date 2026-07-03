@@ -4,11 +4,14 @@ function createFlower() {
   const flower = document.createElement("div");
   flower.className = "flower";
 
-  const x = Math.random() * window.innerWidth;
-  const y = Math.random() * window.innerHeight;
-
   const size = 30 + Math.random() * 50;
   const delay = Math.random() * 5;
+
+  // Margen para que nunca se salga
+  const margin = size / 2;
+
+  const x = margin + Math.random() * (window.innerWidth - size);
+  const y = margin + Math.random() * (window.innerHeight - size);
 
   flower.style.left = x + "px";
   flower.style.top = y + "px";
@@ -29,7 +32,7 @@ function createFlower() {
   field.appendChild(flower);
 }
 
-// 🌸 muchas flores en pantalla
+// 🌸 Muchas flores
 for (let i = 0; i < 80; i++) {
   createFlower();
 }
