@@ -27,6 +27,7 @@ function createFlower() {
       <circle class="petal" cx="25" cy="50" r="18"/>
       <circle class="center" cx="50" cy="50" r="14"/>
     </svg>
+
   `;
 
   field.appendChild(flower);
@@ -36,3 +37,12 @@ function createFlower() {
 for (let i = 0; i < 80; i++) {
   createFlower();
 }
+
+
+
+
+
+
+
+
+
