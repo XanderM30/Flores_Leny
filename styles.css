@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0b1b3a, #050814);
+  font-family: Arial, sans-serif;
+}
+
+/* 🌍 contenedor adaptable */
+#field {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 🌸 flor */
+.flower {
+  position: absolute;
+  width: clamp(25px, 6vw, 60px);
+  height: clamp(25px, 6vw, 60px);
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(47,123,255,0.6));
+}
+
+/* 🌸 pétalos */
+.petal {
+  fill: #2f7bff;
+  opacity: 0.9;
+}
+
+.center {
+  fill: #cfe8ff;
+}
+
+/* 🌬️ animación */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-1vh) scale(1.05); }
+}
+
+/* 🏷️ texto responsive */
+.title {
+  position: absolute;
+  top: 2vh;
+  width: 100%;
+  text-align: center;
+  color: #cfe8ff;
+  z-index: 10;
+  text-shadow: 0 0 15px rgba(47,123,255,0.6);
+  padding: 0 10px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: clamp(18px, 4vw, 32px);
+  letter-spacing: 2px;
+}
+
+.title p {
+  margin: 5px 0 0;
+  font-size: clamp(12px, 2.5vw, 16px);
+  opacity: 0.8;
+}
